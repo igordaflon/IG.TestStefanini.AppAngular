@@ -1,13 +1,19 @@
-<h2>Atualizar Cidade</h2>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Atualizar Cidade</h2>
 
-<div class="form-group">
-    <label for="inputNome">Nome</label>
-    <input type="text" class="form-control" id="inputNome" placeholder="Insira o nome da cidade" [(ngModel)]="request.nome">
+            <div class="form-group">
+                <label for="inputNome">Nome</label>
+                <input type="text" class="form-control" id="inputNome" placeholder="Insira o nome da cidade" [(ngModel)]="request.nome">
+            </div>
+
+            <div class="form-group">
+                <label for="inputUf">Uf</label>
+                <input type="text" class="form-control" id="inputUf" placeholder="Insira o Uf da cidade" [(ngModel)]="request.uf">
+            </div>
+
+            <a (click)="atualizar()" role="button" class="btn btn-success mt-3">Salvar</a>
+        </div>
+    </div>
 </div>
-
-<div class="form-group">
-    <label for="inputUf">Uf</label>
-    <input type="text" class="form-control" id="inputUf" placeholder="Insira o Uf da cidade" [(ngModel)]="request.uf">
-</div>
-
-<a (click)="atualizar()" role="button" class="btn btn-success">Salvar</a>
