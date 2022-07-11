@@ -1,0 +1,25 @@
+<a [routerLink]="['/cidades/nova-cidade']" role="button" class="btn btn-primary">Nova cidade</a>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Uf</th>
+        <th scope="col">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let cidade of cidades">
+        <th scope="row">{{cidade.id}}</th>
+        <td>{{cidade.nome}}</td>
+        <td>{{cidade.uf}}</td>
+        <td>
+          <a [routerLink]="['/cidades/atualizar-cidade/', cidade.id]">Editar</a> | 
+          <a [routerLink]="['/cidades/remover-cidade/', cidade.id]">Remover</a>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>

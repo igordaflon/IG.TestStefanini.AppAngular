@@ -1,0 +1,13 @@
+<h2>Remover Cidade</h2>
+
+<div class="form-group">
+    <label for="inputNome">Nome</label>
+    <input type="text" class="form-control" id="inputNome" disabled="disabled" placeholder="Insira o nome da cidade" [(ngModel)]="request.nome">
+</div>
+
+<div class="form-group">
+    <label for="inputUf">Uf</label>
+    <input type="text" class="form-control" id="inputUf" disabled="disabled" placeholder="Insira o Uf da cidade" [(ngModel)]="request.uf">
+</div>
+
+<a (click)="remover()" role="button" class="btn btn-danger">Remover</a>
